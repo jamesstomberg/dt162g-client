@@ -2,7 +2,7 @@ import { Container } from "react-bootstrap";
 
 const Footer = () => {
     return ( 
-        <Container>
+        <Container className="footer">
             Footer
         </Container>
      );

@@ -8,3 +8,4 @@ Klientapplikation skapad med React.
 - react-router-dom
 - react-bootstrap
 - @userfront/toolkit
+- @userfront/react

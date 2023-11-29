@@ -2,9 +2,7 @@
 import {
   BrowserRouter as Router,
   Routes,
-  Route,
-  Link,
-  Redirect
+  Route
 } from 'react-router-dom';
 import Start from './components/Start';
 import Login from './components/Login';
@@ -12,29 +10,12 @@ import Register from './components/Register';
 import PasswordReset from './components/PasswordReset';
 import Dashboard from './components/Dashboard';
 import Show from './components/Show';
+import CustomNav from './components/CustomNav';
 
 function App() {
   return (
     <Router>
-      <nav>
-        <ul>
-          <li>
-            <Link to="/">Startsida</Link>
-          </li>
-          <li>
-            <Link to="/login">Logga in</Link>
-          </li>
-          <li>
-            <Link to="/register">Registrera dig</Link>
-          </li>
-          <li>
-            <Link to="/reset">Återställ lösenord</Link>
-          </li>
-          <li>
-            <Link to="/dashboard">Administration</Link>
-          </li>
-        </ul>
-      </nav>
+      <CustomNav />
       <Routes>
         <Route exact path="/" element={<Start />} />
         <Route path="/show/:id" element={<Show />} />

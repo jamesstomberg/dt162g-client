@@ -1,11 +1,15 @@
 import Container from 'react-bootstrap/Container';
 
-function Login () {
+import Userfront, { LoginForm } from "@userfront/toolkit/react";
+
+Userfront.init("8nwy5zrn");
+
+function Login() {
   return (
     <>
       <Container>
         <h1>Logga in</h1>
-        <p>Logga in här</p>
+        <LoginForm />
       </Container>
     </>
   )

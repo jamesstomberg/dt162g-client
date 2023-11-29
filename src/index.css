@@ -10,3 +10,11 @@
 .header {
   text-align: center;
 }
+
+/* Body pancake */
+#root {
+  display: grid;
+  height: 100vh;
+  grid-template-rows: auto 1fr auto;
+}
+

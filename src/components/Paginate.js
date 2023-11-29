@@ -9,6 +9,9 @@ const Paginate = ({ page, pageCount }) => {
 
     const handleClick = (number) => {
         navigate('/?page=' + number);
+
+        // Scroll to top of page.
+        window.scrollTo({top: 0, left: 0, behavior: 'smooth'});
     }
 
     for (let number = 1; number <= pageCount; number++) {
