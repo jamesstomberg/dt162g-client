@@ -9,8 +9,6 @@ import PostList from './PostList';
 Userfront.init("8nwy5zrn");
 
 const Dashboard = () => {
-    const [privateData, setPrivateData] = useState();
-
     /*useEffect(() => {
         (async () => {
             try {
@@ -51,7 +49,7 @@ const Dashboard = () => {
             <Container>
                 <h3>Hantera inlägg</h3>
                 <div>
-                    <Button>Skapa inlägg</Button>
+                    <Link to="/create-post">Skapa inlägg</Link>
                 </div>
 
                 <PostList />

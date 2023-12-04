@@ -11,6 +11,7 @@ import PasswordReset from './components/PasswordReset';
 import Dashboard from './components/Dashboard';
 import Show from './components/Show';
 import CustomNav from './components/CustomNav';
+import CreatePost from './components/CreatePost';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/register" element={<Register />} />
         <Route path="/reset" element={<PasswordReset />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/create-post" element={<CreatePost />} />
       </Routes>
     </Router>
   )
