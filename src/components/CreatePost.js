@@ -9,7 +9,6 @@ const CreatePost = () => {
     const [postTitle, setPostTitle] = useState();
     const [postContent, setPostContent] = useState();
     const [postImage, setPostImage] = useState();
-    const [authorEmail, setAuthorEmail] = useState(Userfront.store.user.email);
     const navigate = useNavigate();
 
     if (!Userfront.accessToken()) {
@@ -20,8 +19,8 @@ const CreatePost = () => {
 
     const validateForm = () => {
         if (
-            !postTitle,
-            !postContent,
+            !postTitle ||
+            !postContent ||
             !postImage
         ) {
             return false;
@@ -53,8 +52,8 @@ const CreatePost = () => {
             title: postTitle,
             content: postContent,
             image: postImage,
-            email: authorEmail,
-            name: authorEmail
+            email: Userfront.store.user.email,
+            name: Userfront.store.user.email
         };
 
         const formData = new FormData();

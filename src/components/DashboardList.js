@@ -24,7 +24,7 @@ const DashboardList = () => {
                         <td>{post._id}</td>
                         <td>{post.postTitle}</td>
                         <td>
-                            <Link to="edit-post">
+                            <Link to="edit-post" state={{ post: post}}>
                                 <Button variant="success">Redigera</Button>
                             </Link>
                         </td>
