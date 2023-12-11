@@ -8,22 +8,6 @@ import DashboardList from './DashboardList';
 Userfront.init("8nwy5zrn");
 
 const Dashboard = () => {
-    /*useEffect(() => {
-        (async () => {
-            try {
-                const result = await fetch('http://localhost:3001/api/dashboard', {
-                    headers: {
-                        Authorization: `Bearer ${Userfront.accessToken()}`
-                    }
-                })
-                    .then(response => response.json());
-                setPrivateData(result);
-            } catch (err) {
-                console.log(err);
-            }
-        })();
-    }, []);*/
-
     if (!Userfront.accessToken()) {
         return (
             <Navigate to="/login" />

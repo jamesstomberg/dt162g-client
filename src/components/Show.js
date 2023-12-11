@@ -5,7 +5,7 @@ import { useParams } from 'react-router-dom';
 
 const Show = () => {
     const { id } = useParams();
-    const { posts, isPending, error } = useGetPosts(`http://localhost:3001/api/posts/${id}`);
+    const { posts, isPending, error } = useGetPosts(`https://dt162gexpress.onrender.com/api/posts/${id}`);
 
     return (
         <Container className="p-3">

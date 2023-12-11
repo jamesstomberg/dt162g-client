@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-const useGetPosts = (url = 'http://localhost:3001/api/posts') => {
+const useGetPosts = (url = 'https://dt162gexpress.onrender.com/api/posts') => {
     const [posts, setPosts] = useState(null);
     const [pagination, setPagination] = useState(null);
     const [isPending, setIsPending] = useState(true);

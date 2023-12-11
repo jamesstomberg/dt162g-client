@@ -65,7 +65,7 @@ const CreatePost = () => {
         formData.append('name', data.name);
 
         // Send form data.
-        fetch('http://localhost:3001/api/posts', {
+        fetch('https://dt162gexpress.onrender.com/api/posts', {
             method: 'POST',
             headers: {
                 authorization: `Bearer ${Userfront.accessToken()}`

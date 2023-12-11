@@ -16,7 +16,7 @@ const DeletePost = () => {
     }
 
     const handleDelete = () => {
-        fetch('http://localhost:3001/api/posts/' + postId,
+        fetch('https://dt162gexpress.onrender.com/api/posts/' + postId,
             {
                 method: 'DELETE',
                 headers: {

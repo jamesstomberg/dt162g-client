@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import useGetPosts from '../hooks/useGetPosts';
 
 const DashboardList = () => {
-    const { posts, isPending, error } = useGetPosts('http://localhost:3001/api/allposts');
+    const { posts, isPending, error } = useGetPosts('https://dt162gexpress.onrender.com/api/allposts');
 
     return (
         <Table striped bordered hover className="mt-3">

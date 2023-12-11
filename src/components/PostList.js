@@ -11,7 +11,7 @@ const PostList = () => {
     const page = new URLSearchParams(location.search).get('page');
 
     useEffect(() => {
-        setUrl(`http://localhost:3001/api/posts?page=${page}`);
+        setUrl(`https://dt162gexpress.onrender.com/api/posts?page=${page}`);
     }, [page])
 
     const { posts, pagination, isPending, error } = useGetPosts(url);

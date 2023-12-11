@@ -69,7 +69,7 @@ const EditPost = () => {
             formData.append('name', data.name);
 
             // Send form data.
-            fetch('http://localhost:3001/api/posts/' + post._id, {
+            fetch('https://dt162gexpress.onrender.com/api/posts/' + post._id, {
                 method: 'PUT',
                 headers: {
                     authorization: `Bearer ${Userfront.accessToken()}`
@@ -97,7 +97,7 @@ const EditPost = () => {
             };
 
             // Update post without image.
-            fetch('http://localhost:3001/api/posts/' + post._id,
+            fetch('https://dt162gexpress.onrender.com/api/posts/' + post._id,
                 {
                     method: 'PUT',
                     headers: {
