@@ -3,7 +3,8 @@ import { Container } from "react-bootstrap";
 const Footer = () => {
     return ( 
         <Container className="footer">
-            Footer
+            <p>Av: James Stomberg, jast2202@student.miun.se</p>
+            <p>Kurs: DT162G vid Mittuniversitetet</p>
         </Container>
      );
 }
