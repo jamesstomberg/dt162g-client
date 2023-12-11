@@ -1,10 +1,9 @@
-import { useEffect, useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Link, Navigate } from 'react-router-dom';
 import { LogoutButton } from '@userfront/toolkit/react';
 import Userfront from '@userfront/toolkit/react';
 import { Button } from 'react-bootstrap';
-import PostList from './PostList';
+import DashboardList from './DashboardList';
 
 Userfront.init("8nwy5zrn");
 
@@ -52,7 +51,7 @@ const Dashboard = () => {
                     <Link to="/create-post">Skapa inlägg</Link>
                 </div>
 
-                <PostList />
+                <DashboardList />
             </Container>
         </Container>
     );

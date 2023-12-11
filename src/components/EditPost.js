@@ -1,22 +1,14 @@
-import { useState } from "react";
 import { Container, Form, Button } from "react-bootstrap";
+import { useState } from "react";
 import Userfront from '@userfront/toolkit/react';
-import { Navigate, useNavigate } from "react-router-dom";
 
-Userfront.init("8nwy5zrn");
 
-const CreatePost = () => {
+
+const EditPost = () => {
     const [postTitle, setPostTitle] = useState();
     const [postContent, setPostContent] = useState();
     const [postImage, setPostImage] = useState();
     const [authorEmail, setAuthorEmail] = useState(Userfront.store.user.email);
-    const navigate = useNavigate();
-
-    if (!Userfront.accessToken()) {
-        return (
-            <Navigate to="/login" />
-        );
-    }
 
     const validateForm = () => {
         if (
@@ -48,44 +40,6 @@ const CreatePost = () => {
             alert('Filtypen för bilden måste vara png eller jpg!');
             return;
         }
-
-        const data = {
-            title: postTitle,
-            content: postContent,
-            image: postImage,
-            email: authorEmail,
-            name: authorEmail
-        };
-
-        const formData = new FormData();
-
-        formData.append('title', data.title);
-        formData.append('content', data.content);
-        formData.append('image', data.image);
-        formData.append('email', data.email);
-        formData.append('name', data.name);
-
-        // Send form data.
-        fetch('http://localhost:3001/api/posts', {
-            method: 'POST',
-            headers: {
-                authorization: `Bearer ${Userfront.accessToken()}`
-            },
-            body: formData
-        })
-        .then(res => {
-            if (!res.ok) {
-                throw Error('Något gick fel, inlägget kunde inte skapas.');
-            }
-
-            if (res.status === 200) {
-                alert('Inlägget skapades!');
-                navigate('/dashboard');
-            }
-        })
-        .catch(err => {
-            console.error(err.message);
-        })
     }
 
     return (
@@ -109,4 +63,4 @@ const CreatePost = () => {
     );
 }
 
-export default CreatePost;
+export default EditPost;

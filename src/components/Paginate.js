@@ -2,7 +2,7 @@ import Pagination from 'react-bootstrap/Pagination';
 import Container from 'react-bootstrap/Container';
 import { useNavigate } from 'react-router-dom';
 
-const Paginate = ({ page, pageCount }) => {
+const Paginate = ({ page, pageCount, source }) => {
     const navigate = useNavigate();
     let active = page;
     let items = [];

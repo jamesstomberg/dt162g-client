@@ -12,6 +12,8 @@ import Dashboard from './components/Dashboard';
 import Show from './components/Show';
 import CustomNav from './components/CustomNav';
 import CreatePost from './components/CreatePost';
+import EditPost from './components/EditPost';
+import DeletePost from './components/DeletePost';
 
 function App() {
   return (
@@ -25,6 +27,8 @@ function App() {
         <Route path="/reset" element={<PasswordReset />} />
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/create-post" element={<CreatePost />} />
+        <Route path="/dashboard/edit-post" element={<EditPost />} />
+        <Route path="/dashboard/delete-post" element={<DeletePost />} />
       </Routes>
     </Router>
   )
